@@ -51,7 +51,7 @@ public class Perso {
         autre.setPointsDeVie(autre.getPointsDeVie()-this.puissance);
         System.out.println(this.nom+" attaque "+autre.getNom()+ "et lui fait perdre des points");
         System.out.println("les points de"+autre.getNom()+" :"+autre.getPointsDeVie());
-        
+
     }
 
     public boolean est_Mort() {
