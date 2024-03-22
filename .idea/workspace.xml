@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="implem de 2eme classe de Perso ainsi que première mise ne place de test">
-      <change afterPath="$PROJECT_DIR$/src/Perso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PersoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,6 +52,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RunManager" selected="JUnit.All in integration Continu">
     <configuration name="All in integration Continu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -111,7 +118,6 @@
         <item itemvalue="JUnit.All in integration Continu" />
         <item itemvalue="JUnit.PersonnageTest.attaque" />
         <item itemvalue="JUnit.PersonnageTest.Mort" />
-        <item itemvalue="JUnit.PersonnageTest.attaque (1)" />
         <item itemvalue="JUnit.PersonnageTest.HpInitiauxtest" />
       </list>
     </recent_temporary>
@@ -146,7 +152,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711104782388</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implem de 2eme classe de Perso ainsi que première mise ne place de test">
+      <created>1711113625697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711113625697</updated>
+    </task>
+    <task id="LOCAL-00005" summary="implem de 2eme classe de Perso ainsi que première mise ne place de test">
+      <created>1711113755445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711113755445</updated>
+    </task>
+    <task id="LOCAL-00006" summary="implem de 2eme classe de Perso ainsi que première mise ne place de test">
+      <created>1711113766721</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711113766721</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
