@@ -1,0 +1,19 @@
+Index: src/Perso.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Perso {\n\n    private String nom;\n    private int pointsDeVie;\n    private int puissance;\n    private boolean vivant;\n\n    public String getNom() {\n        return nom;\n    }\n\n    public void setNom(String nom) {\n        this.nom = nom;\n    }\n\n    public int getPointsDeVie() {\n        return pointsDeVie;\n    }\n\n    public void setPointsDeVie(int pointsDeVie) {\n        this.pointsDeVie = pointsDeVie;\n    }\n\n    public int getPuissance() {\n        return puissance;\n    }\n\n    public void setPuissance(int puissance) {\n        this.puissance = puissance;\n    }\n\n    public boolean getEtat() {\n        return vivant;\n    }\n\n    public void setEtat() {\n        this.vivant = !vivant;\n    }\n\n    public Perso(String nom, int pointsDeVie, int puissance) {\n        this.nom = nom;\n        this.pointsDeVie = pointsDeVie;\n        this.puissance = puissance;\n        this.vivant = true;\n    }\n\n    public void attaque(Perso autre){\n        if (!this.vivant){\n            System.out.println(this.nom + \" ne peut pas attaquer car il est mort\");\n        }\n        autre.setPointsDeVie(autre.getPointsDeVie()-this.puissance);\n        System.out.println(this.nom+\" attaque \"+autre.getNom()+ \"et lui fait perdre des points\");\n        System.out.println(\"les points de\"+autre.getNom()+\" :\"+autre.getPointsDeVie());\n        \n    }\n\n    public boolean est_Mort() {\n        if (this.pointsDeVie <= 0) {\n            System.out.println(this.nom + \" est maintenant vaincu \");\n            return this.vivant = false;\n        }\n        return this.vivant;\n    }\n\n\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Perso.java b/src/Perso.java
+--- a/src/Perso.java	(revision bc3797beb8529a0ac88d1568ad9607f4e0a0cb7f)
++++ b/src/Perso.java	(date 1711113634543)
+@@ -51,7 +51,7 @@
+         autre.setPointsDeVie(autre.getPointsDeVie()-this.puissance);
+         System.out.println(this.nom+" attaque "+autre.getNom()+ "et lui fait perdre des points");
+         System.out.println("les points de"+autre.getNom()+" :"+autre.getPointsDeVie());
+-        
++
+     }
+ 
+     public boolean est_Mort() {
