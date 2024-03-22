@@ -10,4 +10,6 @@ public class PersoTest {
         Perso sorcier = new Perso("Sorcier", 25, 7);
     }
 
+
+
 }

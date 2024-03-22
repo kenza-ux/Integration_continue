@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="autres fichiers générés">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
+    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="commande git corrigée">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PersoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PersonnageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonnageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
-  <component name="RunManager" selected="JUnit.All in integration Continu">
+  <component name="RunManager" selected="JUnit.PersonnageTest.attaque">
     <configuration name="All in integration Continu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="integration Continu" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in integration Continu" />
         <item itemvalue="JUnit.PersonnageTest.attaque" />
+        <item itemvalue="JUnit.All in integration Continu" />
         <item itemvalue="JUnit.PersonnageTest.Mort" />
         <item itemvalue="JUnit.PersonnageTest.HpInitiauxtest" />
       </list>
@@ -176,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711113766721</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commande git corrigée">
+      <created>1711115473100</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711115473102</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +206,7 @@
     <MESSAGE value="petit bug de lib manquante au path" />
     <MESSAGE value="tests pour attaque ainsique sur l'implementation" />
     <MESSAGE value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
-    <option name="LAST_COMMIT_MESSAGE" value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
+    <MESSAGE value="commande git corrigée" />
+    <option name="LAST_COMMIT_MESSAGE" value="commande git corrigée" />
   </component>
 </project>
