@@ -1,0 +1,189 @@
+Index: pom.xml
+===================================================================
+diff --git a/pom.xml b/pom.xml
+deleted file mode 100644
+--- a/pom.xml	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
++++ /dev/null	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
+@@ -1,32 +0,0 @@
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <groupId>com.example</groupId>
+-    <artifactId>my-project</artifactId>
+-    <version>1.0-SNAPSHOT</version>
+-
+-    <properties>
+-        <maven.compiler.source>17</maven.compiler.source>
+-        <maven.compiler.target>17</maven.compiler.target>
+-    </properties>
+-
+-    <dependencies>
+-        <!-- Ajoutez vos dépendances ici -->
+-    </dependencies>
+-
+-    <build>
+-        <plugins>
+-            <plugin>
+-                <groupId>org.apache.maven.plugins</groupId>
+-                <artifactId>maven-compiler-plugin</artifactId>
+-                <version>3.8.1</version>
+-                <configuration>
+-                    <source>17</source>
+-                    <target>17</target>
+-                </configuration>
+-            </plugin>
+-        </plugins>
+-    </build>
+-</project>
+Index: .github/workflows/maven.yml
+===================================================================
+diff --git a/.github/workflows/maven.yml b/.github/workflows/maven.yml
+deleted file mode 100644
+--- a/.github/workflows/maven.yml	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
++++ /dev/null	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
+@@ -1,37 +0,0 @@
+-name: Java CI with Maven
+-
+-on:
+-  push:
+-    branches: [ "master" ]
+-  pull_request:
+-    branches: [ "master" ]
+-
+-jobs:
+-  build:
+-
+-    runs-on: ubuntu-latest
+-
+-    steps:
+-    - uses: actions/checkout@v3
+-    - name: Set up JDK 17
+-      uses: actions/setup-java@v3
+-      with:
+-        java-version: '17'
+-        distribution: 'temurin'
+-        cache: maven
+-    - name: Build with Maven
+-      run: mvn -B package --file pom.xml
+-    - name: Run tests
+-      run: mvn test
+-      continue-on-error: true
+-    - name: Check test results
+-      if: ${{ failure() }}
+-      run: echo "Tests failed!"
+-    - name: Create failure branch
+-      if: ${{ failure() }}
+-      run: git checkout -b failure-branch && git add . && git commit -m "Test failure" && git push origin failure-branch
+-    - name: Git reset
+-      run: git reset --hard HEAD@{1}
+-    - name: Fast forward
+-      run: git pull --ff-only
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8a681615-011e-49a4-a8ba-361332a067c9\" name=\"Changes\" comment=\"autres fichiers générés\">\n      <change beforePath=\"$PROJECT_DIR$/.github/workflows/maven.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.github/workflows/maven.yml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeStyleSettingsInfer\">\n    <option name=\"done\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectCodeStyleSettingsMigration\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2e0I9KB6JQ6h8sIJtL4jNlaYe4S\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"Downloaded.Files.Path.Enabled\" value=\"false\" />\n    <property name=\"Repository.Attach.Annotations\" value=\"false\" />\n    <property name=\"Repository.Attach.JavaDocs\" value=\"false\" />\n    <property name=\"Repository.Attach.Sources\" value=\"false\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settings.project.maven.importing\" />\n  </component>\n  <component name=\"RunManager\" selected=\"JUnit.All in integration Continu\">\n    <configuration name=\"All in integration Continu\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"TEST_OBJECT\" value=\"package\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PersonnageTest\" type=\"JUnit\" factoryName=\"JUnit\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonnageTest\" />\n      <option name=\"METHOD_NAME\" value=\"\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PersonnageTest.HpInitiauxtest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonnageTest\" />\n      <option name=\"METHOD_NAME\" value=\"HpInitiauxtest\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PersonnageTest.Mort\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonnageTest\" />\n      <option name=\"METHOD_NAME\" value=\"Mort\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PersonnageTest.attaque\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonnageTest\" />\n      <option name=\"METHOD_NAME\" value=\"attaque\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PersonnageTest.attaque\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"integration Continu\" />\n      <option name=\"PACKAGE_NAME\" value=\"\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"PersonnageTest\" />\n      <option name=\"METHOD_NAME\" value=\"attaque\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.All in integration Continu\" />\n        <item itemvalue=\"JUnit.PersonnageTest.attaque\" />\n        <item itemvalue=\"JUnit.PersonnageTest.Mort\" />\n        <item itemvalue=\"JUnit.PersonnageTest.HpInitiauxtest\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8a681615-011e-49a4-a8ba-361332a067c9\" name=\"Changes\" comment=\"\" />\n      <created>1711034919236</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1711034919236</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"petit bug de lib manquante au path\">\n      <created>1711035212815</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711035212815</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"tests pour attaque ainsique sur l'implementation\">\n      <created>1711098351204</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711098351205</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"tests pour attaque ainsique sur l'implementation\">\n      <created>1711104782388</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711104782388</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"implem de 2eme classe de Perso ainsi que première mise ne place de test\">\n      <created>1711113625697</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711113625697</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"implem de 2eme classe de Perso ainsi que première mise ne place de test\">\n      <created>1711113755445</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711113755445</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"implem de 2eme classe de Perso ainsi que première mise ne place de test\">\n      <created>1711113766721</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1711113766721</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"j'ai refait tout\" />\n    <MESSAGE value=\"petit bug de lib manquante au path\" />\n    <MESSAGE value=\"tests pour attaque ainsique sur l'implementation\" />\n    <MESSAGE value=\"implem de 2eme classe de Perso ainsi que première mise ne place de test\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"implem de 2eme classe de Perso ainsi que première mise ne place de test\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
++++ b/.idea/workspace.xml	(date 1711117155021)
+@@ -4,8 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="autres fichiers générés">
+-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
++    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="commande git corrigée">
++      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/test/PersoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersoTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/test/PersonnageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonnageTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -57,7 +61,7 @@
+     <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+   </component>
+-  <component name="RunManager" selected="JUnit.All in integration Continu">
++  <component name="RunManager" selected="JUnit.PersonnageTest.attaque">
+     <configuration name="All in integration Continu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="integration Continu" />
+       <option name="PACKAGE_NAME" value="" />
+@@ -118,8 +122,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.All in integration Continu" />
+         <item itemvalue="JUnit.PersonnageTest.attaque" />
++        <item itemvalue="JUnit.All in integration Continu" />
+         <item itemvalue="JUnit.PersonnageTest.Mort" />
+         <item itemvalue="JUnit.PersonnageTest.HpInitiauxtest" />
+       </list>
+@@ -176,7 +180,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1711113766721</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="commande git corrigée">
++      <created>1711115473100</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1711115473102</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -195,6 +206,7 @@
+     <MESSAGE value="petit bug de lib manquante au path" />
+     <MESSAGE value="tests pour attaque ainsique sur l'implementation" />
+     <MESSAGE value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
+-    <option name="LAST_COMMIT_MESSAGE" value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
++    <MESSAGE value="commande git corrigée" />
++    <option name="LAST_COMMIT_MESSAGE" value="commande git corrigée" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: test/PersonnageTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\nimport static org.junit.Assert.*;\nimport static org.junit.Assert.assertEquals;\n\nimport org.junit.Test;\n\npublic class PersonnageTest {\n    @Test\n    public void HpInitiauxtest(){\n        Personnage p1 = new Personnage (true,3);\n\n        assertTrue(p1.est_Mort() );\n    }\n    @Test\n    public void Mort()\n    {\n        Personnage p2= new Personnage(false,40);\n        p2.Tuer();\n\n        assertEquals(\"les points apres mort\",0,p2.getPoints());\n        assertTrue(\"est ce qu'il est mort\",p2.est_Mort());\n    }\n\n    @Test\n    public void attaque(){\n        Personnage attaquant = new Personnage(false, 100);\n        Personnage cible = new Personnage(false, 50);\n\n        attaquant.attaquer(cible);\n        // Vérifier si la cible est morte\n        //assertEquals(true,cible.est_Mort());\n        assertEquals(40,cible.getPoints());\n       // assertTrue(\"est ce cible est morte\",cible.est_Mort());\n\n\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/PersonnageTest.java b/test/PersonnageTest.java
+--- a/test/PersonnageTest.java	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
++++ b/test/PersonnageTest.java	(date 1711116134785)
+@@ -30,7 +30,7 @@
+         // Vérifier si la cible est morte
+         //assertEquals(true,cible.est_Mort());
+         assertEquals(40,cible.getPoints());
+-       // assertTrue("est ce cible est morte",cible.est_Mort());
++        assertTrue("est ce cible est morte",cible.est_Mort());
+ 
+ 
+     }
+Index: test/PersoTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.junit.Before;\nimport org.junit.Test;\nimport static org.junit.Assert.*;\npublic class PersoTest {\n\n\n    @Before\n    public void setUp() {\n        Perso guerrier = new Perso(\"Guerrier\", 30, 5);\n        Perso sorcier = new Perso(\"Sorcier\", 25, 7);\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/PersoTest.java b/test/PersoTest.java
+--- a/test/PersoTest.java	(revision 0163ab5eea854ab3775418234b6f1cb9f3299666)
++++ b/test/PersoTest.java	(date 1711116134745)
+@@ -10,4 +10,6 @@
+         Perso sorcier = new Perso("Sorcier", 25, 7);
+     }
+ 
++
++
+ }
