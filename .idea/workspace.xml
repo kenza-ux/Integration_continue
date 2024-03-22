@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="j'ai refait tout">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration Continu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Personnage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/PersonnageTest.java" afterDir="false" />
+    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="petit bug de lib manquante au path">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration Continu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/integration Continu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PersonnageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonnageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +38,78 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="JUnit.All in integration Continu">
+    <configuration name="All in integration Continu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonnageTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonnageTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonnageTest.HpInitiauxtest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonnageTest" />
+      <option name="METHOD_NAME" value="HpInitiauxtest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonnageTest.Mort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonnageTest" />
+      <option name="METHOD_NAME" value="Mort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonnageTest.attaque" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonnageTest" />
+      <option name="METHOD_NAME" value="attaque" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonnageTest.attaque" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integration Continu" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PersonnageTest" />
+      <option name="METHOD_NAME" value="attaque" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in integration Continu" />
+        <item itemvalue="JUnit.PersonnageTest.attaque" />
+        <item itemvalue="JUnit.PersonnageTest.Mort" />
+        <item itemvalue="JUnit.PersonnageTest.attaque (1)" />
+        <item itemvalue="JUnit.PersonnageTest.HpInitiauxtest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -58,6 +120,14 @@
       <option name="presentableId" value="Default" />
       <updated>1711034919236</updated>
     </task>
+    <task id="LOCAL-00001" summary="petit bug de lib manquante au path">
+      <created>1711035212815</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711035212815</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="j'ai refait tout" />
-    <option name="LAST_COMMIT_MESSAGE" value="j'ai refait tout" />
+    <MESSAGE value="petit bug de lib manquante au path" />
+    <option name="LAST_COMMIT_MESSAGE" value="petit bug de lib manquante au path" />
   </component>
 </project>
