@@ -31,7 +31,7 @@ jobs:
       if: ${{ failure() }}
       run: git checkout -b failure-branch && git add . && git commit -m "Test failure" && git push origin failure-branch
     - name: Git reset
-      run: git reset --hard HEAD^
+      run: git reset --hard HEAD@{1}
     - name: Fast forward
       run: git pull --ff-only
 
