@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="petit bug de lib manquante au path">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="tests pour attaque ainsique sur l'implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration Continu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/integration Continu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personnage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/PersonnageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PersonnageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711035212815</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tests pour attaque ainsique sur l'implementation">
+      <created>1711098351204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711098351205</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="j'ai refait tout" />
     <MESSAGE value="petit bug de lib manquante au path" />
-    <option name="LAST_COMMIT_MESSAGE" value="petit bug de lib manquante au path" />
+    <MESSAGE value="tests pour attaque ainsique sur l'implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests pour attaque ainsique sur l'implementation" />
   </component>
 </project>
