@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="tests pour attaque ainsique sur l'implementation">
+    <list default="true" id="8a681615-011e-49a4-a8ba-361332a067c9" name="Changes" comment="implem de 2eme classe de Perso ainsi que première mise ne place de test">
+      <change afterPath="$PROJECT_DIR$/src/Perso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/PersoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -11,6 +13,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711098351205</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tests pour attaque ainsique sur l'implementation">
+      <created>1711104782388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711104782388</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +164,7 @@
     <MESSAGE value="j'ai refait tout" />
     <MESSAGE value="petit bug de lib manquante au path" />
     <MESSAGE value="tests pour attaque ainsique sur l'implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests pour attaque ainsique sur l'implementation" />
+    <MESSAGE value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
+    <option name="LAST_COMMIT_MESSAGE" value="implem de 2eme classe de Perso ainsi que première mise ne place de test" />
   </component>
 </project>
